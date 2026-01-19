@@ -122,8 +122,8 @@ export function ContactSection() {
                 <label
                   key={option.value}
                   className={`relative cursor-pointer px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${formData.helpType === option.value
-                      ? "bg-[#6F4E37] text-white dark:ring-2 dark:ring-white"
-                      : "bg-zinc-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-zinc-200 dark:hover:bg-slate-700"
+                    ? "bg-[#6F4E37] text-white dark:ring-2 dark:ring-white"
+                    : "bg-zinc-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-zinc-200 dark:hover:bg-slate-700"
                     }`}
                 >
                   <input
