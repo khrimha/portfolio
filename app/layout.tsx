@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${sora.variable} font-sans antialiased bg-white dark:bg-slate-950 transition-colors duration-300`}>
+      <body className={`${sora.variable} font-sans antialiased bg-white dark:bg-background transition-colors duration-300`}>
         <ThemeProvider>
           <NavBar />
           <main>{children}</main>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -43,14 +42,12 @@ export function NavBar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="fixed top-2 left-6 sm:left-12 lg:left-16 z-50"
       >
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="jedidiah."
-            width={96}
-            height={96}
-            className="dark:invert dark:brightness-200 dark:sepia dark:hue-rotate-[340deg]"
-          />
+        <Link
+          href="/"
+          className="text-2xl sm:text-[1.75rem] font-serif italic font-medium tracking-tight text-[#2f2119] dark:text-[#f7ebe2] hover:text-[#6F4E37] dark:hover:text-[#dcb8a0] transition-colors"
+          aria-label="jedidiah."
+        >
+          jedidiah.
         </Link>
       </motion.div>
 
