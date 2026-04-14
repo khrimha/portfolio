@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 import { useTheme } from "./theme-provider";
 
 const letterVariants = {
@@ -87,48 +88,41 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Visual */}
+          {/* Right Image */}
           <div className="relative hidden lg:block">
+            {/* Decorative shapes */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="absolute top-16 left-8 w-36 h-36 rounded-full bg-gradient-to-br from-coffee-300 to-coffee-500 dark:from-coffee-500 dark:to-coffee-700 blur-2xl opacity-70"
+              className="absolute bottom-0 left-0 w-48 h-48 bg-coffee-600 dark:bg-coffee-500 dark:ring-2 dark:ring-white/20 rounded-tr-[80px] z-10"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute bottom-20 right-10 w-28 h-28 rounded-full bg-gradient-to-br from-[#b48a70] to-[#6F4E37] dark:from-[#d1a88f] dark:to-[#8a5f45] blur-2xl opacity-70"
+              className="absolute top-1/3 right-0 w-24 h-32 bg-coffee-400 dark:bg-coffee-300 z-10"
             />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute bottom-1/4 left-1/4 w-16 h-16 bg-coffee-800 dark:bg-coffee-700 rounded-full z-0"
+            />
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="h-full w-full flex items-center justify-center px-14"
+              className="relative h-full w-full"
             >
-              <div className="relative w-full max-w-md rounded-3xl border border-coffee-300/80 dark:border-coffee-600/70 bg-white/85 dark:bg-[#221914]/80 backdrop-blur-md p-9 shadow-xl shadow-[#6F4E37]/10 dark:shadow-black/30">
-                <p className="text-xs uppercase tracking-[0.18em] text-[#6F4E37] dark:text-[#d1a88f] mb-4">
-                  Product + Execution
-                </p>
-                <p className="text-2xl font-serif text-coffee-900 dark:text-coffee-100 leading-snug">
-                  I build clear product direction and turn it into shipped outcomes.
-                </p>
-                <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-xl bg-zinc-100 dark:bg-[#31231c] px-3 py-2 text-coffee-700 dark:text-coffee-200">
-                    Strategy
-                  </div>
-                  <div className="rounded-xl bg-zinc-100 dark:bg-[#31231c] px-3 py-2 text-coffee-700 dark:text-coffee-200">
-                    UX Thinking
-                  </div>
-                  <div className="rounded-xl bg-zinc-100 dark:bg-[#31231c] px-3 py-2 text-coffee-700 dark:text-coffee-200">
-                    Execution
-                  </div>
-                  <div className="rounded-xl bg-zinc-100 dark:bg-[#31231c] px-3 py-2 text-coffee-700 dark:text-coffee-200">
-                    Growth
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/hero-image.jpg"
+                alt="Emmanuel Jedidiah"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </motion.div>
           </div>
         </div>

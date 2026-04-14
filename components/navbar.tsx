@@ -40,11 +40,11 @@ export function NavBar() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-2 left-6 sm:left-12 lg:left-16 z-50"
+        className="fixed top-6 left-6 sm:left-12 lg:left-16 z-50"
       >
         <Link
           href="/"
-          className="text-2xl sm:text-[1.75rem] font-serif italic font-medium tracking-tight text-[#2f2119] dark:text-[#f7ebe2] hover:text-[#6F4E37] dark:hover:text-[#dcb8a0] transition-colors"
+          className="inline-block leading-none text-2xl sm:text-[1.75rem] font-serif italic font-medium tracking-tight text-[#2f2119] dark:text-[#f7ebe2] hover:text-[#6F4E37] dark:hover:text-[#dcb8a0] transition-colors"
           aria-label="jedidiah."
         >
           jedidiah.
